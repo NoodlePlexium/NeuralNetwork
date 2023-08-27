@@ -105,6 +105,7 @@ class NeuralNetwork:
                             change = (newValue-self.getWeight(i,inNeuron,outNeuron))/batch['length'] 
                             weightChanges[str(i)+"_"+str(inNeuron)+"_"+str(outNeuron)]-=change
                     nodeValues=newNodeValues
+                    
         # Update all Weights and Biases
         self.weights=weightChanges
         self.updateBiases(biasChanges) 
